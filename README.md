@@ -8,6 +8,7 @@ A smart rasperry pi (Python 2.x)
 * sudo pip install PyAudio
 * sudo apt-get install mpg123
 * sudo apt-get install flac
+* pip install python-osc
 
 http://stackoverflow.com/questions/39302974/how-to-capture-audio-in-raspberry-pi-using-pyaudio-python-module-without-overflo
 
