@@ -1,4 +1,4 @@
-# smart-pi
+# irobot
 A smart rasperry pi (Python 2.x)
 
 ## Steps for Linux
