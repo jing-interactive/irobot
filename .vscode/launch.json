@@ -7,6 +7,10 @@
             "request": "launch",
             "stopOnEntry": true,
             "program": "${file}",
+            "args": [
+                "--ip",
+                "127.0.0.1"
+            ],
             "debugOptions": [
                 "WaitOnAbnormalExit",
                 "WaitOnNormalExit",
