@@ -1,24 +1,32 @@
 # irobot
 A smart rasperry pi (Python 2.x / 3.x)
 
-## Steps for Linux
+## Setup in Linux
 
 * sudo apt-get install python-dev
 * sudo apt-get install portaudio19-dev
 * sudo pip install PyAudio
 
+## Run in Linux
 * jackd -d dummy
+* python main.py --ip 102.168.1.1 --port 3333
 
-## Steps for Windows
+## Setup in Windows
 
 * http://conda.pydata.org/miniconda.html
 * pip install PyAudio
 
-## Steps for macOS
+## Run in Windows
+* python main.py --ip 102.168.1.1 --port 3333
+
+## Setup in macOS
 
 * http://conda.pydata.org/miniconda.html
 * brew install portaudio
 * pip install PyAudio
+
+## Run in macOS
+* python main.py --ip 102.168.1.1 --port 3333
 
 ### MISC info ###
 http://stackoverflow.com/questions/39302974/how-to-capture-audio-in-raspberry-pi-using-pyaudio-python-module-without-overflo
