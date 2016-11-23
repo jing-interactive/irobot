@@ -1,22 +1,37 @@
 # irobot
-A smart rasperry pi (Python 2.x)
+A smart rasperry pi (Python 2.x / 3.x)
 
-## Steps for Linux
+## Setup in Linux
 
 * sudo apt-get install python-dev
 * sudo apt-get install portaudio19-dev
 * sudo pip install PyAudio
-* sudo apt-get install mpg123
-* sudo apt-get install flac
-* pip install python-osc
 
+## Run in Linux
+* jackd -d dummy
+* python main.py --ip 192.168.1.123 --port 3333
+
+## Setup in Windows
+
+* http://conda.pydata.org/miniconda.html
+* pip install PyAudio
+
+## Run in Windows
+* python main.py --ip 192.168.1.123 --port 3333
+
+## Setup in macOS
+
+* http://conda.pydata.org/miniconda.html
+* brew install portaudio
+* pip install PyAudio
+
+## Run in macOS
+* python main.py --ip 192.168.1.123 --port 3333
+
+### MISC info ###
 http://stackoverflow.com/questions/39302974/how-to-capture-audio-in-raspberry-pi-using-pyaudio-python-module-without-overflo
 
 http://stackoverflow.com/questions/10733903/pyaudio-input-overflowed/
-
-###WTF! MUST RUN!###
-* jackd -d dummy
-
 * sudo leafpad /usr/share/alsa/alsa.conf
 * cat ~/.asoundrc
 
@@ -35,20 +50,3 @@ http://stackoverflow.com/questions/10733903/pyaudio-input-overflowed/
 * alsamixer
 * audacity
 
-## Steps for macOS
-
-* sudo apt-get install python-dev
-* brew install portaudio
-* pip install PyAudio
-* brew install mpg123
-* brew install flac
-
-## Steps for Windows w/ Python2
-
-* pip install PyAudio
-
-## Steps for Windows w/ conda + Python3
-
-* conda create -n python2 python=2
-* activate python2
-* pip install PyAudio
