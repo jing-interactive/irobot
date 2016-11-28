@@ -18,6 +18,8 @@ def main():
                         help="The ip of the OSC server")
     parser.add_argument("--port", type=int, default=3000,
                         help="The port the OSC server is listening on")
+    parser.add_argument("--filename", default="D:/words.txt",
+                        help="The filename that wil contain the recognized words.")    
     args = parser.parse_args()
 
     client = udp_client.SimpleUDPClient(args.ip, args.port)
@@ -46,7 +48,9 @@ def main():
                 if str is bytes: # this version of Python uses bytes for strings (Python 2)
                     value = u"{}".format(value).encode("utf-8")
                 print("You said", value)
-                client.send_message("/say", value)
+                with open(args.filename, 'w') as f:
+                	f.write(value);
+                client.send_message("/recognized", args.filename)
             except sr.UnknownValueError:
                 print("Oops! Didn't catch that")
             except sr.RequestError as err:
