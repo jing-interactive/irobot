@@ -48,9 +48,9 @@ def main():
                 if str is bytes: # this version of Python uses bytes for strings (Python 2)
                     value = u"{}".format(value).encode("utf-8")
                 print("You said", value)
-                with open(args.filename, 'w') as f:
+                with open(args.filename, 'w', encoding='utf8') as f:
                 	f.write(value);
-                client.send_message("/recognized", args.filename)
+                client.send_message("/say", value)
             except sr.UnknownValueError:
                 print("Oops! Didn't catch that")
             except sr.RequestError as err:
