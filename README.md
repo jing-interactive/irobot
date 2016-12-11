@@ -9,7 +9,7 @@ A smart rasperry pi (Python 2.x / 3.x)
 
 ## Run in Linux
 * jackd -d dummy
-* python main.py --ip 192.168.1.123 --port 3333 --filename "D:/words.txt"
+* python main.py --ip 192.168.1.123 --port 3333 --filename "D:/words.txt" --back_volume 200
 
 ## Setup in Windows
 
@@ -17,7 +17,7 @@ A smart rasperry pi (Python 2.x / 3.x)
 * pip install PyAudio
 
 ## Run in Windows
-* python main.py --ip 192.168.1.123 --port 3333 --filename "D:/words.txt"
+* python main.py --ip 192.168.1.123 --port 3333 --filename "D:/words.txt" --back_volume 200
 
 ## Setup in macOS
 
@@ -26,7 +26,7 @@ A smart rasperry pi (Python 2.x / 3.x)
 * pip install PyAudio
 
 ## Run in macOS
-* python main.py --ip 192.168.1.123 --port 3333 --filename "D:/words.txt"
+* python main.py --ip 192.168.1.123 --port 3333 --filename "D:/words.txt" --back_volume 200
 
 ### MISC info ###
 http://stackoverflow.com/questions/39302974/how-to-capture-audio-in-raspberry-pi-using-pyaudio-python-module-without-overflo

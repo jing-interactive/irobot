@@ -19,7 +19,9 @@ def main():
     parser.add_argument("--port", type=int, default=3000,
                         help="The port the OSC server is listening on")
     parser.add_argument("--filename", default="D:/words.txt",
-                        help="The filename that wil contain the recognized words.")    
+                        help="The filename that wil contain the recognized words.")
+    parser.add_argument("--back_volume", type=int, default=-1,
+                        help="Background volume.")    
     args = parser.parse_args()
 
     client = udp_client.SimpleUDPClient(args.ip, args.port)
@@ -28,9 +30,13 @@ def main():
     mic = sr.Microphone()
 
     try:
-        print("A moment of silence, please...")
-        with mic as source:
-            rec.adjust_for_ambient_noise(source)
+        if args.back_volume == -1:
+            print("A moment of silence, please...")
+            with mic as source:
+                rec.adjust_for_ambient_noise(source)
+        else:
+            rec.energy_threshold = args.back_volume
+
         print("Set minimum energy threshold to {}".format(rec.energy_threshold))
         while True:
             print("Say something!")
