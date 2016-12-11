@@ -40,8 +40,8 @@ def main():
             try:
                 # recognize speech using Google Speech Recognition
                 # value = r.recognize_google(audio)
-                value = rec.recognize_bing(
-                    audio, key="0211831985124fdbb41fe2161bc1cd10", language="zh-CN")
+                # value = rec.recognize_bing(audio, key="0211831985124fdbb41fe2161bc1cd10", language="zh-CN")
+                value = rec.recognize_baidu(audio, key="KS7NnNQetwOkanR5x92OHVxB", secret_key="7e87ec1ff0c9c8c9bbe99a1115cc2464")
 
                 # we need some special handling here to correctly print unicode
                 # characters to standard output
