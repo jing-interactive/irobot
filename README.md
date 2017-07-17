@@ -5,7 +5,7 @@ A smart rasperry pi (Python 2.x / 3.x)
 
 * sudo apt-get install python-dev
 * sudo apt-get install portaudio19-dev
-* sudo pip install PyAudio
+* sudo pip install PyAudio -U
 
 ## Run in Linux
 * jackd -d dummy
@@ -14,7 +14,7 @@ A smart rasperry pi (Python 2.x / 3.x)
 ## Setup in Windows
 
 * http://conda.pydata.org/miniconda.html
-* pip install PyAudio
+* pip install PyAudio -U
 
 ## Run in Windows
 * python main.py --ip 192.168.1.123 --port 3333 --filename "D:/words.txt" --back_volume 200
@@ -23,7 +23,8 @@ A smart rasperry pi (Python 2.x / 3.x)
 
 * http://conda.pydata.org/miniconda.html
 * brew install portaudio
-* pip install PyAudio
+* pip install PyAudio -U
+* pip install --global-option='build_ext' --global-option='-I/usr/local/include' --global-option='-L/usr/local/lib' pyaudio
 
 ## Run in macOS
 * python main.py --ip 192.168.1.123 --port 3333 --filename "D:/words.txt" --back_volume 200
