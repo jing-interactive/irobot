@@ -16,6 +16,7 @@ A smart rasperry pi (Python 2.x / 3.x)
 * http://conda.pydata.org/miniconda.html
 * pip install PyAudio -U
 * pip install PocketSphinx
+* https://drive.google.com/uc?id=0Bw_EqP-hnaFNSWdqdm5maWZtTGc&export=download
 
 ## Run in Windows
 * python main.py --ip 192.168.1.123 --port 3333 --filename "D:/words.txt" --back_volume 200

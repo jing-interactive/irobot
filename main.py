@@ -134,7 +134,7 @@ def main():
                 elif style == "baidu":
                     value = rec.recognize_baidu(audio, key="KS7NnNQetwOkanR5x92OHVxB", secret_key="7e87ec1ff0c9c8c9bbe99a1115cc2464")
                 elif style == "sphinx":
-                    value = rec.recognize_sphinx(audio)
+                    value = rec.recognize_sphinx(audio, language="zh-CN")
                 else:
                     value = rec.recognize_sphinx(audio)
                     
