@@ -137,7 +137,10 @@ def main():
                     value = rec.recognize_sphinx(audio, language="zh-CN")
                 else:
                     value = rec.recognize_sphinx(audio)
-                    
+                
+                if value == "":
+                    print("Found nothing!")
+                    continue
                 # we need some special handling here to correctly print unicode
                 # characters to standard output
                 if str is bytes: # this version of Python uses bytes for strings (Python 2)
